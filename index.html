@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling & Interactive Elements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Portfolio Templates<span class="emoji">🚀</span></h1>
+            <p>JavaScript Event Handling & Interactive Elements</p>
+            <div class="theme-toggle">
+                <button id="theme-button">Switch theme 🌙</button>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="templates">Templates</button>
+            <button class="tab-btn" data-tab="gallery">Gallery</button>
+            <button class="tab-btn" data-tab="signup">Sign Up</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <div id="templates" class="tab-pane active">
+            <h2>Choose Your Template</h2>
+            <div class="template-grid">
+                <div class="template-card" data-template="minimal">
+                <h3>Minimal</h3>
+                <p>Clean and simple design</p>
+                <div class="template-preview">
+                    <div class="preview-header"></div>
+                    <div class="preview-content">
+                    <div class="preview-block"></div>
+                    <div class="preview-block"></div>
+                    </div>
+                </div>
+                <button class="select-btn">Select</button>
+                </div>
+                <div class="template-card" data-template="creative">
+                <h3>Creative</h3>
+                <p>Bold and artistic layout</p>
+                <div class="template-preview">
+                    <div class="preview-header creative"></div>
+                    <div class="preview-content creative">
+                    <div class="preview-block"></div>
+                    <div class="preview-block"></div>
+                    </div>
+                </div>
+                <button class="select-btn">Select</button>
+                </div>
+                <div class="template-card" data-template="professional">
+                <h3>Professional</h3>
+                <p>Corporate and polished</p>
+                <div class="template-preview">
+                    <div class="preview-header professional"></div>
+                    <div class="preview-content professional">
+                    <div class="preview-block"></div>
+                    <div class="preview-block"></div>
+                    </div>
+                </div>
+                <button class="select-btn">Select</button>
+                </div>
+            </div>
+            <div id="template-message" class="message-box hidden">Template selected! Press any key to continue.</div>
+            </div>
+    
+            <!-- Gallery Tab -->
+            <div id="gallery" class="tab-pane">
+            <h2>Portfolio Examples</h2>
+            <div class="gallery-container">
+                <button id="prev-btn" class="gallery-btn">❮</button>
+                <div class="gallery-view">
+                <img src="images/1.webp" alt="Portfolio example 1" class="gallery-img active">
+                <img src="images/2.webp" alt="Portfolio example 2" class="gallery-img">
+                <img src="images/3.webp" alt="Portfolio example 3" class="gallery-img">
+                <img src="images/4.jpg" alt="Portfolio example 4" class="gallery-img">
+                </div>
+                <button id="next-btn" class="gallery-btn">❯</button>
+            </div>
+            <div class="gallery-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+            </div>
+    
+            <!-- Sign Up Tab -->
+            <div id="signup" class="tab-pane">
+            <h2>Create Your Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <span class="validation-message"></span>
+                </div>
+                <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="validation-message"></span>
+                </div>
+                <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="validation-message"></span>
+                </div>
+                <div class="password-strength">
+                <div class="strength-bar">
+                    <div class="strength-fill"></div>
+                </div>
+                <p class="strength-text">Password strength: <span>None</span></p>
+                </div>
+                <button type="submit" id="submit-btn">Create Account</button>
+            </form>
+            <div id="form-success" class="message-box success hidden">
+                Account created successfully! Double-click here to continue.
+            </div>
+            </div>
+        </div>
+
+        <div id="secret-panel" class="secret-panel hidden">
+            <h3>🎉 You found the secret panel! 🎉</h3>
+            <p>Thanks for exploring all the interactive features!</p>
+            <button id="close-secret">Close</button>
+        </div>
+      
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
